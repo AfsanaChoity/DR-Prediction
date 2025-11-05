@@ -1,4 +1,4 @@
-#Diabetic Retinopathy Detection from OCT Images
+Diabetic Retinopathy Detection from OCT Images
 
 This project focuses on detecting Diabetic Retinopathy (DR) from Optical Coherence Tomography (OCT) images using a Convolutional Neural Network (CNN). The dataset contains images of DME (Diabetic Macular Edema) and Normal retinal scans.
 Workflow
