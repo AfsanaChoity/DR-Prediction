@@ -1,66 +1,62 @@
-Diabetic Retinopathy Detection from OCT Images
+# Diabetic Retinopathy Detection from OCT Images
 
-This project focuses on detecting Diabetic Retinopathy (DR) from Optical Coherence Tomography (OCT) images using a Convolutional Neural Network (CNN). The dataset contains images of DME (Diabetic Macular Edema) and Normal retinal scans.
-Workflow
+A deep learning project for **detecting Diabetic Retinopathy (DR)** from Optical Coherence Tomography (OCT) images using a **Convolutional Neural Network (CNN)**. The model classifies retinal scans as **DME (Diabetic Macular Edema)** or **Normal**.  
 
-Data Preprocessing
+---
 
-Crop retina region from OCT images.
+## 📝 Features
+- Automated detection of Diabetic Retinopathy from OCT images  
+- Data preprocessing: retina cropping, resizing, and normalization  
+- CNN-based architecture with 3 convolutional blocks and fully connected layers  
+- Regularization using **L2** and **dropout**  
+- Binary classification: **DME / Normal**  
+- Training with **Adam optimizer** and **Binary Crossentropy loss**  
+- Learning rate adjustment using **ReduceLROnPlateau**  
+- Supports **K-fold cross-validation**  
 
-Resize cropped images to 224x224.
+---
 
-Normalize pixel values to [0,1].
+## 📊 Workflow
 
-Data Splitting
+**1. Data Preprocessing**  
+- Crop retina region from OCT images  
+- Resize images to 224x224  
+- Normalize pixel values to [0,1]  
 
-Train: 90%
+**2. Data Splitting**  
+- Train: 90%  
+- Validation: 5%  
+- Test: 5%  
 
-Validation: 5%
+**3. Model Training**  
+- Epochs: 20  
+- Optimizer: Adam  
+- Loss: Binary Crossentropy  
+- Callbacks: ReduceLROnPlateau  
 
-Test: 5%
+**4. Evaluation**  
+- Accuracy: ~99% on validation set  
 
-Model Architecture
+---
 
-CNN with 3 convolutional blocks.
+## 🛠️ Tech Stack / Dependencies
+- **Python 3.x**  
+- **TensorFlow / Keras**  
+- **OpenCV**  
+- **NumPy, Pandas, Matplotlib, Seaborn**  
+- **scikit-learn, imutils, tqdm**  
 
-Fully connected layers with L2 regularization and dropout.
+---
 
-Output: Binary classification (DME / Normal).
+## ⚡ Usage
+1. Place the dataset in the `Dataset/` folder  
+2. Run the preprocessing script to crop and resize images  
+3. Train the CNN model on `train_ds` and validate on `validation_ds`  
+4. Evaluate the model performance on `test_ds`  
 
-Training
+---
 
-Loss: Binary Crossentropy
-
-Optimizer: Adam
-
-Epochs: 20
-
-Callbacks: ReduceLROnPlateau for learning rate adjustment
-
-Evaluation
-
-Accuracy achieved: ~99% on validation set
-
-K-fold cross-validation supported
-
-Dependencies
-
-Python 3.x
-
-TensorFlow / Keras
-
-OpenCV
-
-NumPy, Pandas, Matplotlib, Seaborn
-
-scikit-learn, imutils, tqdm
-
-Usage
-
-Place the dataset in the Dataset/ folder.
-
-Run the preprocessing script to crop and resize images.
-
-Train the CNN model using train_ds and validate on validation_ds.
-
-Evaluate performance on test_ds.
+## 🔍 Benefits
+- Accurate and fast detection of diabetic retinopathy  
+- Supports medical diagnostics with minimal manual intervention  
+- Can be extended to other retinal diseases 
